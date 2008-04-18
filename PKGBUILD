@@ -1,4 +1,3 @@
-# $Id: PKGBUILD,v 1.15 2008/03/24 11:46:48 juergen Exp $
 # Maintainer: Juergen Hoetzel <juergen@archlinux.org>
 # Contributor: Damir Perisa <damir.perisa@bluewin.ch>
 #
