@@ -3,7 +3,7 @@
 
 pkgname=lua 
 pkgver=5.1.4
-pkgrel=2
+pkgrel=3
 pkgdesc="A powerful light-weight programming language designed for extending applications." 
 arch=(i686 x86_64)
 url="http://www.lua.org/" 
@@ -25,5 +25,9 @@ build() {
     linux install  || return 1
   install -D -m 644 etc/lua.pc $startdir/pkg/usr/lib/pkgconfig/lua.pc
   install -D -m644 COPYRIGHT $startdir/pkg/usr/share/licenses/$pkgname/COPYRIGHT
+
+  # Install the documentation
+  mkdir -p $pkgdir/usr/share/doc/lua
+  cp -R doc/* $pkgdir/usr/share/doc/lua
 }
 # vim: ts=2 sw=2 et ft=sh
