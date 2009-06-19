@@ -3,7 +3,7 @@
 
 pkgname=lua 
 pkgver=5.1.4
-pkgrel=3
+pkgrel=4
 pkgdesc="A powerful light-weight programming language designed for extending applications." 
 arch=(i686 x86_64)
 url="http://www.lua.org/" 
