@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc='Powerful lightweight programming language designed for extending applications'
 arch=('x86_64')
 url='https://www.lua.org/'
-depends=('readline')
+depends=('libreadline')
 license=('MIT')
 options=('!emptydirs')
 source=(https://www.lua.org/ftp/lua-$pkgver.tar.gz
@@ -20,6 +20,7 @@ sha256sums=('7d5ea1b9cb6aa0b59ca3dde1c6adcb57ef83a1ba8e5432c0ecd06bf439b3ad88'
             'a8a7f89ab0c03b4bc1d58a935c54df792ad628edb4d1788c5ac66e4fc2d9f800'
             'ca9252633e782b8f85d6a94ea4f6babd4fe30bd759085b373160b1878e36ff78'
             '142fb08b41a807b192b4b2c166696a1830a1c97967e5099ad0e579bf500e1da4')
+install="${pkgname}.install"
 
 prepare() {
   patch -d lua-$pkgver -p1 -i ../liblua.so.patch
@@ -27,6 +28,8 @@ prepare() {
 
   sed "s/%VER%/$_majorver/g;s/%REL%/$pkgver/g" lua.pc > lua-$pkgver/lua.pc
   sed "s/%VER%/$_majorver/g;s/%REL%/$pkgver/g;s/-llua/-llua++/g" lua.pc > lua++-$pkgver/lua++.pc
+  
+  export MSYS="winsymlinks:native"
 }
 
 build() {

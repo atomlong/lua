@@ -1,0 +1,20 @@
+pkgbase = lua
+	pkgdesc = Powerful lightweight programming language designed for extending applications
+	pkgver = 5.4.6
+	pkgrel = 1
+	url = https://www.lua.org/
+	install = lua.install
+	arch = x86_64
+	license = MIT
+	depends = libreadline
+	options = !emptydirs
+	source = https://www.lua.org/ftp/lua-5.4.6.tar.gz
+	source = liblua.so.patch
+	source = lua.pc
+	source = LICENSE
+	sha256sums = 7d5ea1b9cb6aa0b59ca3dde1c6adcb57ef83a1ba8e5432c0ecd06bf439b3ad88
+	sha256sums = a8a7f89ab0c03b4bc1d58a935c54df792ad628edb4d1788c5ac66e4fc2d9f800
+	sha256sums = ca9252633e782b8f85d6a94ea4f6babd4fe30bd759085b373160b1878e36ff78
+	sha256sums = 142fb08b41a807b192b4b2c166696a1830a1c97967e5099ad0e579bf500e1da4
+
+pkgname = lua
