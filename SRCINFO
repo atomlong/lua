@@ -6,6 +6,7 @@ pkgbase = lua
 	install = lua.install
 	arch = x86_64
 	license = MIT
+	makedepends = libreadline-devel
 	depends = libreadline
 	options = !emptydirs
 	source = https://www.lua.org/ftp/lua-5.4.6.tar.gz

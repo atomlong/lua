@@ -10,6 +10,7 @@ pkgdesc='Powerful lightweight programming language designed for extending applic
 arch=('x86_64')
 url='https://www.lua.org/'
 depends=('libreadline')
+makedepends=('libreadline-devel')
 license=('MIT')
 options=('!emptydirs')
 source=(https://www.lua.org/ftp/lua-$pkgver.tar.gz
